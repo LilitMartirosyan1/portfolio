@@ -1,0 +1,16 @@
+@import "variables";
+
+@mixin nav-font-effect {
+  font: 700 2.5rem Raleway, sans-serif;
+  text-transform: uppercase;
+
+  -webkit-text-stroke: 1px hsla(0,0%,100%,.7);
+  background: linear-gradient(hsla(0,0%,100%,.7) 0 100%) left / 0 no-repeat;
+  -webkit-background-clip: text;
+  color:transparent;
+  transition: 0.7s linear;
+
+  &:hover {
+    background-size: 100%;
+  }
+}

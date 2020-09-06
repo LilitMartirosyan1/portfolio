@@ -1,0 +1,47 @@
+@import "src/Components/variables";
+
+footer {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #252422;
+
+  .container-footer {
+    small {
+      color: #a49e9e;
+      letter-spacing: 0.7px;
+
+      i {
+        color: $main-color;
+        animation: b 1s ease infinite;
+      }
+
+      @keyframes b {
+        0% {
+          transform: scale(.75)
+        }
+
+        20% {
+          transform: scale(1)
+        }
+
+        40% {
+          transform: scale(.75)
+        }
+
+        60% {
+          transform: scale(1)
+        }
+
+        80% {
+          transform: scale(.75)
+        }
+
+        to {
+          transform: scale(.75)
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "src/Components/variables";
+
+
+//header
+.page-about {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: url("https://demos.creative-tim.com/paper-kit-2-pro/assets/img/sections/pk-pro-cover.jpg");
+  background-position: 50%;
+  background-size: cover;
+  overflow: hidden;
+
+  .container-about {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      color: $font-color;
+      font-size: 7em;
+      background: linear-gradient(to bottom, #FFFFFF 35%, #4e6773 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .fog-low {
+      width: 100%;
+      bottom: 0;
+      position: absolute;
+      z-index: 3;
+    }
+
+    h2 {
+      color: $font-color;
+      margin-top: 3%;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+  }
+}

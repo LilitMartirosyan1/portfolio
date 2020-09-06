@@ -1,0 +1,76 @@
+@import "src/Components/variables";
+
+.page-contact {
+  height: 100vh;
+  background-image: url("https://demos.creative-tim.com/paper-kit-2/assets/img/login-image.jpg");
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    background-color: rgba(0, 0, 0, .5);
+    content: "";
+    display: block;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .container-contact {
+    width: 42%;
+    top: 20vh;
+    left: 29%;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    border: transparent;
+    border-radius: 6px;
+    padding: 38px 25px;
+    background: #ff8f5e;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .row {
+        display: flex;
+        height: 150px;
+
+        div {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          justify-content: space-between;
+          margin:0 2%;
+          input, textarea {
+            padding: 10px;
+            border: transparent;
+            border-radius: 4px;
+          }
+
+          textarea {
+            height: 150px;
+          }
+        }
+      }
+      .submit input{
+        padding: 15px;
+        border: transparent;
+        border-radius: 4px;
+        background: $main-color;
+        cursor: pointer;
+        color: $font-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        margin-top: 30px;
+        &:hover{
+          background: #f33816;
+        }
+      }
+    }
+  }
+}

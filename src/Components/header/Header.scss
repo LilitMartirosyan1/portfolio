@@ -1,0 +1,124 @@
+@import "src/Components/variables";
+@import "src/Components/mixin";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  .menu-toggle {
+    position: fixed;
+    right: 5%;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: $font-color;
+    cursor: pointer;
+    background: $main-color;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    line-height: 40px;
+    z-index: 999;
+
+    &:hover {
+      background: #f33816;
+    }
+  }
+
+  .nav-brand {
+    font-family: 'Dancing Script', cursive !important;
+    position: fixed;
+    cursor: pointer;
+    z-index: 999;
+    left: 8%;
+    top: 15px;
+    font-size: 25px;
+    color: $font-color;
+    opacity: .9;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  nav {
+    .sidebar-wrapper {
+      position: absolute;
+
+      .sidebar-nav {
+        width: 50%;
+        height: 100%;
+        position: fixed;
+        z-index: 3;
+        right: 0;
+        transform: translateX(100%);
+        transition: all .2s ease 0s;
+        background: #212529;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 70px;
+
+        a {
+          width: 30%;
+          margin: 0 auto;
+          display: block;
+          text-decoration: none;
+          text-align: center;
+          color: $font-color;
+          padding: 15px 0;
+          @include nav-font-effect;
+        }
+      }
+
+      .sidebar-bg {
+        height: 100%;
+        position: fixed;
+        z-index: 3;
+        transform: translateX(-101%);
+        transition: all .2s ease 0s;
+        width: 50%;
+        background: $main-color;
+      }
+    }
+  }
+}
+
+#active-menu {
+  transform: translateX(0);
+}
+.nav-down{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 70px;
+  background: $font-color;
+  box-shadow: 0 6px 10px -4px rgba(0,0,0,.15);
+  transition:  0.5s ease-in-out;
+  .nav-brand{
+    position: static;
+    margin-left: 8%;
+    margin-top: 15px;
+    float: left;
+    color:#66615b ;
+  }
+  .menu-toggle{
+    position: static;
+    margin-top: 15px;
+    float: right;
+    margin-right: 5%;
+  }
+  .sidebar-wrapper{
+    top: 70px;
+  }
+}
+.nav-up{
+  transition:  0.5s ease-in-out;
+}
+
