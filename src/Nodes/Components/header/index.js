@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import "./Header.scss"
+import "../../../assets/styles/components/header.scss"
 import {NavLink} from "react-router-dom";
 
-export default class Header extends Component {
+export default class Index extends Component {
 
     state = {
         menuToggle: "menu-toggle",

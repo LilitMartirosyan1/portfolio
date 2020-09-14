@@ -1,6 +1,6 @@
 import React from "react";
-import "./Homepage.scss"
-import Skills from "./Skills";
+import "../../../assets/styles/pages/homepage.scss"
+import Skills from "../../Components/skills";
 
 export default function () {
     return (

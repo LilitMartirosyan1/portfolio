@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import "./Homepage.scss"
-import {ChangeFirstReducer} from "../../redux/action/skill";
+import "../../../assets/styles/components/header.scss"
+import {ChangeFirstReducer} from "../../../redux/action/skill";
 import {connect} from "react-redux"
 import {Fade} from "react-reveal";
 
-class Skills extends Component {
+class Index extends Component {
     state = {
         skills: [
             {id: 0, skillsName: "HTML5", level: 90, time: 0, seconds: 20},
@@ -19,7 +19,6 @@ class Skills extends Component {
     }
 
     componentDidMount() {
-        console.log(document.body.scrollTop)
         this.state.skills.map((e) => {
             const interval = setInterval(() => {
                 if (e.time === e.level) {
@@ -38,7 +37,7 @@ class Skills extends Component {
                     this.state.skills.map((e, index) => {
                             return (
                                 <div className="skill-body" key={e.id}>
-                                    <Fade left>
+                                    <Fade left duration={2000}>
                                         <div>
                                             {
                                                 e.id % 2 === 0 ?
@@ -55,7 +54,7 @@ class Skills extends Component {
 
                                     </Fade>
 
-                                    <Fade right>
+                                    <Fade right duration={5000}>
                                         <div>
                                             {
                                                 e.id % 2 !== 0 ?
@@ -89,4 +88,4 @@ const mapState = (state) => {
     }
 }
 
-export default connect(mapState, mapDispatch)(Skills)
+export default connect(mapState, mapDispatch)(Index)

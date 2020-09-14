@@ -1,8 +1,6 @@
 import React from "react";
 import {Route,Redirect} from "react-router-dom"
-import Homepage from "../homepage/Homepage";
-import About from "../about/About";
-import Contact from "../contact/Contact";
+import {Homepage,About,Contact} from "../Pages";
 
 export default () => {
     return (

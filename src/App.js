@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
-import Header from "./Components/header/Header";
-import About from "./Components/about/About";
-import Footer from "./Components/footer/Footer";
-import Homepage from "./Components/homepage/Homepage";
-import Contact from "./Components/contact/Contact";
-import Layout from "./Components/layout/Layout";
+import {Header,Footer} from "./Nodes/Components";
+import Routes from "./Nodes/routes"
+
 
 export default class App extends Component {
 
@@ -12,8 +9,9 @@ export default class App extends Component {
         return (
             <div className="App">
                 <Header/>
-                <Layout/>
+                <Routes/>
                 <Footer/>
+                {/*<Services/>*/}
             </div>
         );
     }

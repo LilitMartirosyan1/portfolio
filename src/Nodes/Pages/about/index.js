@@ -1,5 +1,6 @@
 import React from "react";
-import "./About.scss"
+import "../../../assets/styles/pages/about.scss"
+import Skills from "../../Components/skills"
 
 export default function () {
     return (
@@ -15,6 +16,7 @@ export default function () {
                     <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
                 </div>
             </div>
+            <Skills/>
         </>
     )
 
