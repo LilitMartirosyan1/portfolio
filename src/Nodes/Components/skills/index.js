@@ -1,10 +1,8 @@
 import React, {Component} from "react";
 import "../../../assets/styles/components/header.scss"
-import {ChangeFirstReducer} from "../../../redux/action/skill";
-import {connect} from "react-redux"
-import {Fade} from "react-reveal";
 
-class Index extends Component {
+
+export default class Skills extends Component {
     state = {
         skills: [
             {id: 0, skillsName: "HTML5", level: 90, time: 0, seconds: 20},
@@ -19,15 +17,15 @@ class Index extends Component {
     }
 
     componentDidMount() {
-        this.state.skills.map((e) => {
-            const interval = setInterval(() => {
-                if (e.time === e.level) {
-                    clearInterval(interval)
-                } else this.setState({
-                    time: ++e.time
-                })
-            }, e.seconds)
-        })
+            this.state.skills.map((e) => {
+                const interval = setInterval(() => {
+                    if (e.time === e.level) {
+                        clearInterval(interval)
+                    } else this.setState({
+                        time: ++e.time
+                    })
+                }, e.seconds)
+            })
     }
 
     render() {
@@ -35,57 +33,19 @@ class Index extends Component {
             <div className="skill">
                 {
                     this.state.skills.map((e, index) => {
-                            return (
-                                <div className="skill-body" key={e.id}>
-                                    <Fade left duration={2000}>
-                                        <div>
-                                            {
-                                                e.id % 2 === 0 ?
-                                                    <div>
-                                                        <p>{e.skillsName}</p>
-                                                        <div className='skill_item_body'>
-                                                            <div className='skill_item' style={{width: `${e.time}%`}}/>
-                                                        </div>
-                                                        <p className='skills-percent'>{e.time}%</p>
-                                                    </div>
-                                                    : null
-                                            }
-                                        </div>
-
-                                    </Fade>
-
-                                    <Fade right duration={5000}>
-                                        <div>
-                                            {
-                                                e.id % 2 !== 0 ?
-                                                    <div>
-                                                        <p>{e.skillsName}</p>
-                                                        <div className='skill_item_body'>
-                                                            <div className='skill_item' style={{width: `${e.time}%`}}/>
-                                                        </div>
-                                                        <p className='skills-percent'>{e.time}%</p>
-                                                    </div>
-                                                    : null
-                                            }
-                                        </div>
-                                    </Fade>
+                        return (
+                            <div className="skill-body" key={e.id}>
+                                <p>{e.skillsName}</p>
+                                <div className='skill_item_body'>
+                                    <div className='skill_item' style={{width: `${e.time}%`}}/>
                                 </div>
-                            )
-                        }
-                    )
+                                <p className='skills-percent'>{e.time}%</p>
+                            </div>
+                        )
+                    })
                 }
             </div>
         )
     }
 }
 
-const mapDispatch = {
-    ChangeFirstReducer
-}
-const mapState = (state) => {
-    return {
-        skills: state.skills.skills
-    }
-}
-
-export default connect(mapState, mapDispatch)(Index)

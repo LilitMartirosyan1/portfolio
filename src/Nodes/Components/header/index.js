@@ -25,7 +25,6 @@ export default class Index extends Component {
             this.setState({
                 navBar:"nav-down"
             })
-            console.log(window.pageYOffset)
         }else{
             this.setState({
                 navBar:"nav-up"
@@ -63,16 +62,16 @@ export default class Index extends Component {
                             <div className="sidebar-nav" id={this.state.classes[0]}>
                                 <ul>
                                     <li>
-                                        <NavLink to={"/"} exact>Home</NavLink>
+                                        <NavLink to={"/"} exact onClick={this.addId}>Home</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to={"/about"}>About</NavLink>
+                                        <NavLink to={"/about"} onClick={this.addId}>About</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to={"/services"}>Services</NavLink>
+                                        <NavLink to={"/services"} onClick={this.addId}>Services</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to={"/contact"}>Contact</NavLink>
+                                        <NavLink to={"/contact"} onClick={this.addId}>Contact</NavLink>
                                     </li>
                                 </ul>
                             </div>
