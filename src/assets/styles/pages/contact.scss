@@ -26,17 +26,17 @@
   }
 
 
-  &:before {
-    background-color: rgba(0, 0, 0, .2);
-    content: "";
-    display: block;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-  }
+  //&:before {
+  //  background-color: rgba(0, 0, 0, .2);
+  //  content: "";
+  //  display: block;
+  //  height: 100vh;
+  //  left: 0;
+  //  top: 0;
+  //  position: absolute;
+  //  width: 100%;
+  //  z-index: 1;
+  //}
 }
 
 .form-contact {
@@ -57,9 +57,14 @@
         border: transparent;
         border-radius: 4px;
       }
+      .error {
+        border: 1px solid $main-color;
+        color:$main-color;
+      }
 
       textarea {
         height: 150px;
+        resize: none;
       }
 
       .submit input {
@@ -76,6 +81,10 @@
 
         &:hover {
           background: #f33816;
+        }
+        &:disabled{
+          background: lightgray;
+          color: #4e6773;
         }
       }
     }

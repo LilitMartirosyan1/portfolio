@@ -17,6 +17,12 @@ export default class Skills extends Component {
     }
 
     componentDidMount() {
+        window.addEventListener("scroll",this.changeScroll)
+
+    }
+
+    changeScroll = e =>{
+        if(e.target.documentElement.scrollTop >= 120){
             this.state.skills.map((e) => {
                 const interval = setInterval(() => {
                     if (e.time === e.level) {
@@ -26,6 +32,8 @@ export default class Skills extends Component {
                     })
                 }, e.seconds)
             })
+        }
+
     }
 
     render() {

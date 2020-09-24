@@ -1,4 +1,5 @@
 import React,{useState,useEffect}from 'react'
+import "./assets/styles/app.scss"
 import {useSelector,useDispatch} from "react-redux";
 import {Header,Footer} from "./Nodes/Components"
 import Routes from "./Nodes/routes"
